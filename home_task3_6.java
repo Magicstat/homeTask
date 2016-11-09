@@ -4,20 +4,20 @@ public class home_task3_6 {
 
 	public static void main(String[] args) {
 		int num[] = new int[10];
-		int[] myNum = {1,2,14,23,3,0,7,8,0,10};
+		int[] myNum = {0,0,3,23,0,0,7,8,5,0};
 		int i;
-		int a=0;
-		int b=0;
-		for (i=9;0<i;--i){
-			b=i;
-			for (int j=i;j<10;j++){
-				if (myNum[b]==0){
-					b=j;
-				}
+		int lastPosition = 0;
+		for(i=0; i<10; i++) {
+			if(myNum[i] != 0) {
+				myNum[lastPosition++] = myNum[i];
+        	System.out.println(myNum[i]);
 			}
-					
-			}
-			System.out.print(myNum);
+		}
+		for( i=lastPosition; i<10; i++) {
+			myNum[i]=0;
+			System.out.println(myNum[i]);
+		}
 	
+
 	}
 }
